@@ -1,77 +1,92 @@
 # Pfand System Analysis (Germany) — Deposit Return Scheme (ESG Data Analytics)
 
-A portfolio-ready data analytics case study on Germany’s **Pfand (deposit-return)** system.
-This project combines **macro packaging trends (2010–2022)** with a **Pfand 2022 baseline deep-dive** to quantify:
-- operational performance (recycling efficiency),
-- environmental impact (CO₂ avoided),
-- financial mechanism (deposit circulation + unclaimed value),
-- statutory validation (2020 vs 2022 audit checkpoint).
+A portfolio-ready data analytics case study on Germany’s **Pfand (deposit-return)** system, built with a **consulting-style narrative**:
+
+**Macro Problem (2010–2022 packaging market) → Micro Solution (Pfand 2022 baseline) → Verified Audit (2020 vs 2022 statutory checkpoint)**
+
+This project combines official German sources with a reproducible Python workflow and an interactive Power BI report.
 
 ---
 
-## Dashboard Preview
+## Dashboard Preview (Power BI)
 
-### Page 1 — The Macro Problem (2010–2022)
-Germany’s packaging market scale and material mix evolution.
+### Page 1 — Macro Packaging Context (2010–2022)
+Shows the **overall scale** of packaging volumes and how the **material mix evolved** over time.
 
-![Dashboard Page 1](assets/dashboard/page1_macro.png)
+![Dashboard Page 1]("images/Page1_macro.jpg")
 
-### Page 2 — The Pfand Solution & Impact (2022 Baseline)
-Pfand system scale, CO₂ avoided by material, deposit money flow, and statutory audit checkpoint.
+### Page 2 — Pfand System Impact (2022 Baseline)
+Shows the **Pfand system baseline** for 2022:
+- system scale (input + recycled volumes),
+- environmental impact (CO₂ avoided by material),
+- economic mechanism (deposit money flow),
+- statutory validation (2020 → 2022 audit delta in pp).
 
-![Dashboard Page 2](assets/dashboard/page2_pfand_impact.png)
+![Dashboard Page 2]("images/Page2_Pfand.jpg")
 
----
 
 ## Key Results (2022 Baseline)
+From the finalized dashboard exports:
 - **Pfand input:** 549.3 kt  
 - **Recycled:** 526.8 kt  
 - **Avg recycling rate:** 97.9%  
 - **CO₂ avoided:** ~0.99 Mt  
-- **Deposit circulation:** ~€5.27bn  
-- **Audit checkpoint:** official §31 tables show recycling-rate change (2020 → 2022, pp) by material
+- **Deposit circulation:** ~€5.27 bn  
+- **Statutory checkpoint (2020 → 2022):** material-level recycling-rate change (pp) from official §31 tables
 
-> Note: Results are based on Pfand-specific statutory reporting (§31 VerpackG) and a 2022 baseline deep-dive.
+---
+
+## What This Project Answers
+- How large is Germany’s packaging market and how has it changed (2010–2022)?
+- What is the **Pfand system baseline** in 2022 (volumes + recycling performance)?
+- Which materials drive the **biggest CO₂ savings** under Pfand?
+- How does the **€0.25 deposit** operate economically (claimed vs unclaimed value)?
+- Do statutory tables confirm measurable performance change (2020 vs 2022)?
 
 ---
 
 ## Data Sources (Primary)
-- Umweltbundesamt (UBA) reports / statutory tables:
-  - UBA 156/2024 — §31 tables (2022)
-  - UBA 109/2022 — §31 tables (2020)
-- Additional industry references used for context (if applicable): TOMRA / Reloop (listed in `/sources` or notebook citations)
+Official German reporting (Umweltbundesamt / UBA), including statutory packaging tables:
+- **UBA 156/2024** — §31 VerpackG tables (Year 2022)
+- **UBA 109/2022** — §31 VerpackG tables (Year 2020)
+
+> The “2020 vs 2022 checkpoint” is intentionally **Pfand-only (§31)** to avoid mixing Pfand and non-Pfand trends.
 
 ---
 
-## Method (What I did)
-- Extracted and cleaned official tabular data (Pfand-specific §31 tables + macro packaging trend tables)
-- Built a modular transformation workflow in Python (pandas)
-- Computed:
-  - material-level volumes (kt)
-  - recycling rate metrics
-  - CO₂ avoided by material (using factor constants)
-  - deposit value circulation and unclaimed Pfand (financial flow)
-  - 2020 vs 2022 checkpoint deltas (pp)
-- Delivered an interactive Power BI report with a consultant-style narrative:
-  **Macro problem → Micro solution → Verified impact**
+## Method Summary
+### 1) Data preparation (Python)
+- Cleaned and standardized official tables (units, materials, year labels)
+- Produced **dashboard-ready exports** with consistent naming
+
+### 2) ESG impact modeling (2022 baseline)
+- Material-level recycled volumes (kt)
+- CO₂ avoided by material using factor constants
+- Deposit circulation and unclaimed Pfand estimation (economic flow)
+
+### 3) Statutory audit checkpoint (2020 vs 2022)
+- Built a defensible 2-year checkpoint (not a 2010–2022 Pfand trendline)
+- Output: recycling-rate change in percentage points (pp) by material
 
 ---
 
 ## Tech Stack
-- Python (pandas, numpy)
-- Jupyter Notebook
-- Power BI (data model, measures, report pages)
-- Git/GitHub
+- **Python**: pandas, numpy (data prep + modeling)
+- **Jupyter Notebooks**: reproducible workflow + documentation
+- **Power BI**: data model, measures, interactive report pages
+- **Git/GitHub**: version control and portfolio packaging
 
 ---
 
 ## Repository Structure
 ```text
 data/
-  raw/              # original source files (optional / not always committed)
-  cleaned/          # dashboard-ready CSV outputs
-notebooks/          # analysis notebooks
+  cleaned/                          # final dashboard-ready exports (CSV)
+  raw/                              # optional raw files (may be excluded from git)
+dashboard/
+  dashboard2.pbix                   # Power BI report
+notebooks/
+  *.ipynb                           # data prep + modeling notebooks
 assets/
-  dashboard/        # dashboard screenshots
-  notebooks/        # notebook screenshots
-dashboard/          # Power BI .pbix
+  dashboard/                        # screenshots for README
+  notebooks/                        # optional notebook visuals
