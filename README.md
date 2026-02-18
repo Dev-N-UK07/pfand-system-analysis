@@ -13,7 +13,7 @@ This project combines official German sources with a reproducible Python workflo
 ### Page 1 — Macro Packaging Context (2010–2022)
 Shows the **overall scale** of packaging volumes and how the **material mix evolved** over time.
 
-![Dashboard Page 1]("images/Page1_macro.jpg")
+![Dashboard Page 1](images/Page1_macro.jpg)
 
 ### Page 2 — Pfand System Impact (2022 Baseline)
 Shows the **Pfand system baseline** for 2022:
