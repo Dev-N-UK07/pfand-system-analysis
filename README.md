@@ -22,7 +22,7 @@ Shows the **Pfand system baseline** for 2022:
 - economic mechanism (deposit money flow),
 - statutory validation (2020 → 2022 audit delta in pp).
 
-![Dashboard Page 2]("images/Page2_Pfand.jpg")
+![Dashboard Page 2](images/Page2_Pfand.jpg)
 
 
 ## Key Results (2022 Baseline)
