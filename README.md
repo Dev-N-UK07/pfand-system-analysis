@@ -1,44 +1,77 @@
-# Pfand System Analysis — Germany (2003–2024)
+# Pfand System Analysis (Germany) — Deposit Return Scheme (ESG Data Analytics)
 
-This repository contains my Data Analytics + ESG case study on Germany’s Pfand system.
-The project is structured in 5 phases: Data Cleaning, EDA, ESG Modelling, Forecasting, and Dashboard creation.
+A portfolio-ready data analytics case study on Germany’s **Pfand (deposit-return)** system.
+This project combines **macro packaging trends (2010–2022)** with a **Pfand 2022 baseline deep-dive** to quantify:
+- operational performance (recycling efficiency),
+- environmental impact (CO₂ avoided),
+- financial mechanism (deposit circulation + unclaimed value),
+- statutory validation (2020 vs 2022 audit checkpoint).
 
-A detailed README with visuals and insights will be added in Phase 5.
+---
 
-Environmental Impact (E in ESG)
-Quantifying CO₂ Emissions Avoided by Germany’s Pfand System (2022)
-This project estimates the environmental impact of Germany’s deposit-return (Pfand) system by quantifying CO₂ emissions avoided through material recycling, using a transparent and conservative methodology.
+## Dashboard Preview
 
-Key Result (2022)
-≈ 0.99 million tonnes CO₂e avoided
-Based on recycled beverage packaging materials:
-Glass
-Aluminium
-Plastic (modelled conservatively using PET as a proxy)
-Methodology (High level)
+### Page 1 — The Macro Problem (2010–2022)
+Germany’s packaging market scale and material mix evolution.
 
-Recycled material quantities are taken from official German statistics (2022).
-An avoided-burden approach is applied, estimating the difference between:
-Virgin material production
-Recycled material production
-Conservative, literature-based EU-average life-cycle CO₂ factors are used.
-Calculations are performed at the material level, then aggregated.
+![Dashboard Page 1](assets/dashboard/page1_macro.png)
 
-Why this matters
-Aluminium shows a high CO₂ impact per kg, reflecting energy-intensive primary production.
-Plastics dominate total avoided emissions due to large material volumes.
-Results demonstrate how deposit-return systems contribute meaningfully to climate mitigation and circular economy goals, even under conservative assumptions.
+### Page 2 — The Pfand Solution & Impact (2022 Baseline)
+Pfand system scale, CO₂ avoided by material, deposit money flow, and statutory audit checkpoint.
 
-Scope & Limitations
-Estimates represent screening-level environmental benefits, not full product life-cycle footprints.
-Plastic recycling is modelled using PET as a proxy for the Pfand plastic stream.
-EU-average factors are used rather than Germany-specific production pathways.
-Collection, sorting, and logistics emissions are not explicitly modelled.
+![Dashboard Page 2](assets/dashboard/page2_pfand_impact.png)
 
-Interpretation:
-Results should be read as indicative, conservative estimates of avoided emissions, suitable for ESG analysis and policy-level insight rather than product-level carbon accounting.
+---
 
+## Key Results (2022 Baseline)
+- **Pfand input:** 549.3 kt  
+- **Recycled:** 526.8 kt  
+- **Avg recycling rate:** 97.9%  
+- **CO₂ avoided:** ~0.99 Mt  
+- **Deposit circulation:** ~€5.27bn  
+- **Audit checkpoint:** official §31 tables show recycling-rate change (2020 → 2022, pp) by material
 
+> Note: Results are based on Pfand-specific statutory reporting (§31 VerpackG) and a 2022 baseline deep-dive.
 
+---
 
+## Data Sources (Primary)
+- Umweltbundesamt (UBA) reports / statutory tables:
+  - UBA 156/2024 — §31 tables (2022)
+  - UBA 109/2022 — §31 tables (2020)
+- Additional industry references used for context (if applicable): TOMRA / Reloop (listed in `/sources` or notebook citations)
 
+---
+
+## Method (What I did)
+- Extracted and cleaned official tabular data (Pfand-specific §31 tables + macro packaging trend tables)
+- Built a modular transformation workflow in Python (pandas)
+- Computed:
+  - material-level volumes (kt)
+  - recycling rate metrics
+  - CO₂ avoided by material (using factor constants)
+  - deposit value circulation and unclaimed Pfand (financial flow)
+  - 2020 vs 2022 checkpoint deltas (pp)
+- Delivered an interactive Power BI report with a consultant-style narrative:
+  **Macro problem → Micro solution → Verified impact**
+
+---
+
+## Tech Stack
+- Python (pandas, numpy)
+- Jupyter Notebook
+- Power BI (data model, measures, report pages)
+- Git/GitHub
+
+---
+
+## Repository Structure
+```text
+data/
+  raw/              # original source files (optional / not always committed)
+  cleaned/          # dashboard-ready CSV outputs
+notebooks/          # analysis notebooks
+assets/
+  dashboard/        # dashboard screenshots
+  notebooks/        # notebook screenshots
+dashboard/          # Power BI .pbix
