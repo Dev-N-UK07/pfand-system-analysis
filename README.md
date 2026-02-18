@@ -71,10 +71,13 @@ Official German reporting (Umweltbundesamt / UBA), including statutory packaging
 ---
 
 ## Tech Stack
-- **Python**: pandas, numpy (data prep + modeling)
-- **Jupyter Notebooks**: reproducible workflow + documentation
-- **Power BI**: data model, measures, interactive report pages
+- **Python (pandas, numpy)**: data extraction/cleaning, transformations, KPI computation, export of dashboard-ready tables  
+- **ETL Workflow**: structured extract → transform → load pipeline from official UBA tables into a Power BI-ready data model  
+- **Power BI**: data modelling (relationships), report design, interactive visuals, slicers  
+- **DAX**: measures for KPIs and scenario-ready calculations (e.g., CO₂ avoided, financial flow metrics)  
+- **Jupyter Notebooks**: reproducible analysis + documentation  
 - **Git/GitHub**: version control and portfolio packaging
+
 
 ---
 
