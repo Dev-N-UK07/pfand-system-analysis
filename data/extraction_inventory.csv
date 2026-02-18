@@ -1,0 +1,9 @@
+source_id,folder,filename,format,main_use,status
+IND_RELOOP_BOOK,data/raw/industry,reloop_deposit_book.pdf,pdf,Background & possible international deposit stats,To review
+IND_TOMRA_RATE,data/raw/industry,tomra_deposit_rate.pdf,pdf,Deposit/return rate comparisons (Germany vs others),To review
+IND_TOMRA_WHITEPAPER,data/raw/industry/tomra_supporting,TOMRA-Unlocking-Circularity-Whitepaper.pdf,pdf,"Narrative, context, maybe supporting stats",To review
+UBA_2022_MAIN,data/raw/uba,uba_156_2024.pdf,pdf,Official German Pfand data (2022 report),High priority
+UBA_2020_MAIN,data/raw/uba,uba_109_2022.pdf,pdf,Official German Pfand data (2020 report),High priority
+UBA_LCA_2024,data/raw/lca,uba_124_2024_lca.pdf,pdf,CO2 / LCA factors for ESG modeling,To review
+SUPPORT_CPI,data/raw/supporting,CPI_Germany.csv,csv,Inflation / CPI trend for context,Ready (no extraction needed)
+SUPPORT_POP,data/raw/supporting,Population_Germany.csv,csv,Population trend for per-capita calculations,Ready (no extraction needed)

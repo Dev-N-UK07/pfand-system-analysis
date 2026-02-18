@@ -1,0 +1,7 @@
+1. Germany achieves a very high return rate of 98%, placing it among the top two DRS systems worldwide, just below Finland.
+2. Across materials, Pfand recycling rates in Germany exceed 95%, with glass, metals, and aluminum above 99% efficiency.
+3. Kunststoff (plastic) dominates Pfand input volume (460 kt+) but still maintains a strong 95% recycling rate, highlighting the robustness of the German DRS.
+4. The TOMRA benchmark shows a clear global pattern: countries with higher deposit values (Finland, Germany, Denmark) consistently achieve above 90% return rates.
+5. Newer DRS systems such as Lithuania, Slovakia, and Estonia show rapidly improving return rates (88–90%), approaching Nordic standards.
+6. The deposit-to-return correlation plot shows a clear positive relationship—higher deposit values strongly correlate with higher return rates.
+7. Compared to countries like the Netherlands (70–75%) or Oregon (87%), Germany’s return system demonstrates superior maturity, efficiency, and consumer participation.

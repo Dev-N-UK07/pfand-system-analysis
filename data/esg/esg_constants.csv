@@ -1,0 +1,4 @@
+material_key,material_label,co2e_saved_kg_per_kg,source,assumption_note
+PET,PET plastic bottles,1.50,EU JRC plastics LCA,Uses EU-average plastic recycling savings (conservative for PET bottles)
+GLASS,Container glass,0.67,FEVE glass LCA,Industry-average EU value for container glass
+ALU,Aluminium cans,6.10,European Aluminium + IAI LCA,Uses European primary aluminium footprint (lower than global average)
